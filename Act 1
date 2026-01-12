@@ -1,1 +1,57 @@
+using System;
+using System.Runtime.Intrinsics.X86;
 
+namespace code
+{
+    public class Holder
+    {
+        
+        private static int number1 = 20;
+
+        private static int number2 = 30;
+
+
+        private static float floatingNumber = 2.5f;
+
+        protected static void Operation()
+        {
+            int wholeNumbers = number1 + number2;
+            float container = floatingNumber * wholeNumbers;
+            Console.WriteLine(container);
+        }
+    }
+
+    public class Display
+    {
+        
+        int displayone = Holder.number1;
+    }
+
+    public class Sample : Holder
+    {
+        static List<int> numbers = new List<int>();
+
+        static float num1 = 2.8f;
+
+        static char Simplecharacter = 'G';
+
+
+        public static void Main(string[] args)
+        {
+            numbers.Add(0);
+            numbers.Add(10);
+            numbers.Add(20);
+            numbers.Add(30);
+
+            int num = numbers[3];
+
+            Holder.Operation(30);
+
+            //int holderNumber = Holder.number1;
+            //int holderNumber = Holder.number2;
+            //int holderNumber = holderNumber1 * holderNumber2;
+
+            //Console.WriteLine(wholeNumber);
+        }
+    }
+}
