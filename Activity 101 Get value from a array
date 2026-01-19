@@ -1,0 +1,23 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+       
+        string[] names = { "Kyle", "Jame", "Bart", "Homer", "Carl", "John", "Paul", "Chris" };
+
+        
+        int indexToAccess = 0;
+
+        if (indexToAccess >= 0 && indexToAccess < names.Length)
+        {
+            string selectedName = names[indexToAccess];
+            Console.WriteLine("The name at index " + indexToAccess + " is: " + selectedName);
+        }
+        else
+        {
+            Console.WriteLine("Index is out of range.");
+        }
+    }
+}
