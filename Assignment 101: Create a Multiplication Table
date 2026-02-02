@@ -1,0 +1,33 @@
+using System;
+
+public class MultiplicationTable
+{
+    public static void Main(string[] args)
+    {
+        
+        Console.WriteLine("Enter a number:");
+
+        
+        if (int.TryParse(Console.ReadLine(), out int number))
+        {
+            
+            for (int i = 1; i <= 10; i++)
+            {
+                
+                if (i == 1)
+                {
+                    Console.WriteLine($"The table is : {number} x {i} = {number * i}");
+                }
+                else
+                {
+                    
+                    Console.WriteLine($"               : {number} x {i} = {number * i}");
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("Please enter a valid whole number.");
+        }
+    }
+}
