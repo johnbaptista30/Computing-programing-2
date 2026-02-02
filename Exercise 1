@@ -1,0 +1,25 @@
+using System;
+
+public class MultiplicationProgram
+{
+    public static void Main()
+    {
+       
+        Console.Write("Input the first number to multiply: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        
+        Console.Write("Input the second number to multiply: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        
+        Console.Write("Input the third number to multiply: ");
+        int num3 = Convert.ToInt32(Console.ReadLine());
+
+        
+        int result = num1 * num2 * num3;
+
+        
+        Console.WriteLine($"{num1} x {num2} x {num3} = {result}");
+    }
+}
