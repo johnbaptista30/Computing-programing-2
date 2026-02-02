@@ -1,0 +1,24 @@
+using System;
+
+public class SwapNumbers
+{
+    public static void Main()
+    {
+        
+        Console.Write("Input the First Number : ");
+        int number1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Input the Second Number : ");
+        int number2 = int.Parse(Console.ReadLine());
+
+        
+        int temp = number1; 
+        number1 = number2; 
+        number2 = temp;     
+
+        
+        Console.WriteLine("\nAfter Swapping :");
+        Console.WriteLine("First Number : " + number1);
+        Console.WriteLine("Second Number : " + number2);
+    }
+}
