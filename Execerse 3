@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace PersonSearchApp
+{
+    
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public Person(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            List<Person> personList = new List<Person>
+            {
+                new Person("Snow", 10),
+                new Person("Crouch", 20),
+                new Person("Kim", 15),
+                new Person("Coach", 35),
+                new Person("Andrew", 45),
+                new Person("Paul", 23),
+                new Person("Scarlet", 28)
+            };
+
+           
+            Console.WriteLine("Search of a name");
+            string searchName = Console.ReadLine();
+
+
+            var foundPerson = personList.FirstOrDefault(p =>
+                p.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase));
+
+            
+            if (foundPerson != null)
+            {
+                Console.WriteLine($"Name: {foundPerson.Name}, Age: {foundPerson.Age}");
+            }
+            else
+            {
+                Console.WriteLine("Name not found in the list.");
+            }
+
+            
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
+        }
+    }
