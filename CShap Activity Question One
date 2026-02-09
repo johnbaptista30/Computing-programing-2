@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        
+        List<int> numbers = new List<int> { 10, 15, 20, 30 };
+
+        
+        double average = numbers.Average();
+
+        
+        Console.WriteLine($"The average of {string.Join(" , ", numbers)} is: {average}");
+    }
+}
