@@ -1,0 +1,45 @@
+using System;
+
+
+class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        
+        List<Person> people = new List<Person>
+        {
+            new Person { Name = "Kurt", Age = 15 },
+            new Person { Name = "Carl", Age = 23 },
+            new Person { Name = "JK", Age = 45 },
+            new Person { Name = "James", Age = 60 },
+            new Person { Name = "Kelvin", Age = 39 },
+            new Person { Name = "Haze", Age = 18 },
+            new Person { Name = "Gaze", Age = 10 },
+            new Person { Name = "Soap", Age = 20 },
+            new Person { Name = "Price", Age = 23 },
+            new Person { Name = "McQueen", Age = 80 },
+            new Person { Name = "Bascreveil", Age = 50 }
+        };
+
+        
+        Console.WriteLine("Enter an Age:");
+        if (int.TryParse(Console.ReadLine(), out int inputAge))
+        {
+            
+            var lowerAgePeople = people.Where(p => p.Age < inputAge).ToList();
+
+            
+            Console.WriteLine($"\nExpected Output:\nPerson with the lower age than {inputAge}");
+            foreach (var person in lowerAgePeople)
+            {
+                Console.WriteLine($"Name: {person.Name} Age: {person.Age}");
+            }
+        }
+    }
+}
