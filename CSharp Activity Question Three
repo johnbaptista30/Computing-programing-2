@@ -1,0 +1,20 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        
+        List<int> listOne = new List<int> { 1, 20, 3, 6, 8, 9, 10, 7, 12, 21, 18 };
+        List<int> listTwo = new List<int> { 10, 2, 30, 15, 8, 21, 13, 18, 28, 25, 16 };
+
+        
+        var sameNumbers = listOne.Intersect(listTwo);
+
+        
+        Console.WriteLine("List One: [" + string.Join(", ", listOne) + "]");
+        Console.WriteLine("List Two: [" + string.Join(", ", listTwo) + "]");
+        Console.WriteLine("\nAll same numbers on both List: " + string.Join(", ", sameNumbers));
