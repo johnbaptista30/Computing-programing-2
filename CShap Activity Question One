@@ -1,5 +1,6 @@
 using System;
 
+
 class Program
 {
     static void Main()
@@ -8,6 +9,7 @@ class Program
         List<int> numbers = new List<int> { 10, 15, 20, 30 };
 
         
+       
         double average = numbers.Average();
 
         
