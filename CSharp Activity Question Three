@@ -1,18 +1,20 @@
-
 using System;
+
 
 class Program
 {
     static void Main()
     {
-        
+        // 1. Define the lists based on the test data
         List<int> listOne = new List<int> { 1, 20, 3, 6, 8, 9, 10, 7, 12, 21, 18 };
         List<int> listTwo = new List<int> { 10, 2, 30, 15, 8, 21, 13, 18, 28, 25, 16 };
 
-        
-        var sameNumbers = listOne.Intersect(listTwo);
+        // 2. Find common elements using Intersect()
+        var commonNumbers = listOne.Intersect(listTwo);
 
-        
+        // 3. Print the results in the requested format
         Console.WriteLine("List One: [" + string.Join(", ", listOne) + "]");
         Console.WriteLine("List Two: [" + string.Join(", ", listTwo) + "]");
-        Console.WriteLine("\nAll same numbers on both List: " + string.Join(", ", sameNumbers));
+        Console.WriteLine("\nAll same numbers on both List: " + string.Join(", ", commonNumbers));
+    }
+}
