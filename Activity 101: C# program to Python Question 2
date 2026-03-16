@@ -1,0 +1,8 @@
+list_one = [1, 20, 3, 6, 8, 9, 10, 7, 12, 21, 18]
+list_two = [10, 2, 30, 15, 8, 21, 13, 18, 28, 25, 16]
+
+common_numbers = list(set(list_one) & set(list_two))
+
+print(f"List One: {list_one}")
+print(f"List Two: {list_two}")
+print(f"All same numbers on both List: {', '.join(map(str, common_numbers))}")
