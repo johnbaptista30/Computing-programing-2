@@ -1,0 +1,32 @@
+people = [
+    {"Name": "Kurt", "Age": 15},
+    {"Name": "Carl", "Age": 23},
+    {"Name": "JK", "Age": 45},
+    {"Name": "James", "Age": 60},
+    {"Name": "Kelvin", "Age": 39},
+    {"Name": "Haze", "Age": 18},
+    {"Name": "Gaze", "Age": 10},
+    {"Name": "Soap", "Age": 20},
+    {"Name": "Price", "Age": 23},
+    {"Name": "McQueen", "Age": 80},
+    {"Name": "Bascreveil", "Age": 50}
+]
+
+try:
+    user_age = int(input("Enter an Age: "))
+    
+    print(f"\nExpected Output:")
+    print(f"Person with the lower age than {user_age}")
+    
+
+    found = False
+    for person in people:
+        if person["Age"] < user_age:
+            print(f"Name: {person['Name']} Age: {person['Age']}")
+            found = True
+            
+    if not found:
+        print("No matches found.")
+
+except ValueError:
+    print("Please enter a valid number for the age.")
